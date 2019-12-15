@@ -10,15 +10,12 @@ function addRandomNumbers(min, max) {
 function checkSum(numberToCheck) {
     for (let i = 0; i < numbersList.length; i++) {
         let difference = numberToCheck - numbersList[i]
+        numbersList.find(difference => difference === numbersList[i])
+        return difference
+
+        /* let difference = numberToCheck - numbersList[i]
         console.log(difference)
-        if (numbersList.find(difference => difference === numbersList[i])){
-            console.log('El numero si es una suma de dos elementos en la lista')
-            break
-        } else {
-            console.log('El numero NO es suma de dos elementos en la lista')
-            break
-        }
-        /* if (numberToCheck - numbersList[i] == numbersList[i]) {
+        if (numbersList.find(difference => difference === numbersList[i]) === numbersList[i]){
             console.log('El numero si es una suma de dos elementos en la lista')
             break
         } else {
